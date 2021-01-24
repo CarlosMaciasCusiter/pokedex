@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { getAllPokemon, getPokemon } from './services/pokemon';
 import './App.css'
 import Card from './components/Card.jsx'
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar.jsx'
 
 function App() {
 
@@ -52,11 +52,11 @@ function App() {
   }
 
   console.log(pokemonData)
-  return (
+  return (    
     <div>
+    <Navbar />
       { loading ? <h1>Loading...</h1> : (
         <div>
-          <Navbar />
           <div className='btn'>
             <button onClick={prev}>Prev</button>
             <button onClick={next}>Next</button>
